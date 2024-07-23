@@ -32,7 +32,7 @@ def main():
             encoded_password = encode(password)
             print("Your password has been encoded and stored!")
         elif choice == 2:
-            decode(password)
+
             pass
         else:
             break
