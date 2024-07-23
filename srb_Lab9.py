@@ -1,8 +1,12 @@
 
 def encode(password):
-    for i in range 0len(password)+1:
-        password = password + 3*(10**i)
-    return password
+    c = 0
+    encoded_password = 0
+    while password > encoded_password:
+        encoded_password = password + 3*(10**c)
+        password = encoded_password
+        c = c + 1
+    return encoded_password
 
 
 
