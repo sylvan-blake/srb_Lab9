@@ -1,24 +1,31 @@
 
 def encode(password):
-    c = 0
-    encoded_password = 0
-    while password > encoded_password:
-        encoded_password = password + 3*(10**c)
-        password = encoded_password
-        c = c + 1
-    return encoded_password
+    string = ''
+    for i in range(0,len(password)):
+        p = int(password[i])
+        if p < 7:
+            p = p + 3
+        elif p == 7:
+            p = 0
+        elif p == 8:
+            p = 1
+        elif p == 9:
+            p = 2
+        string = string + str(p)
+    return string
 
 
 
 
-'''def main():
+def main():
     while True:
+        print()
         print("Menu")
         print("-------------")
         print("1. Encode")
         print("2. Decode")
         print("3. Exit")
-        choice = input("Please enter an option: ")
+        choice = int(input("Please enter an option: "))
 
         if choice == 1:
             password = input("Please enter your password to encode: ")
@@ -28,6 +35,8 @@ def encode(password):
             decode(password)
             pass
         else:
-            break'''
+            break
 
-print(encode(12345555))
+
+if __name__ == '__main__':
+    main()
