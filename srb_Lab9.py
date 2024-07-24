@@ -14,7 +14,6 @@ def encode(password):
         string = string + str(p)
     return string
 
-
 def main():
     while True:
         print()
