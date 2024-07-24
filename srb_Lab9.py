@@ -15,8 +15,6 @@ def encode(password):
     return string
 
 
-
-
 def main():
     while True:
         print()
